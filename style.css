@@ -10,23 +10,40 @@
   height: 90px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #043873;
-
+  padding: 0 220px;
 }
 
 .logo img {
-  width: 140px;
+  width: 190px;
+  height: 34px;
   cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px
 }
 
 .nav-links ul {
   list-style: none;
   display: flex;
-  gap: 40px;
+  gap: 32px;
+}
+
+.burger {
+  display: none;
 }
 
 .nav-links ul li a {
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0%;
   text-decoration: none;
   color: white;
   font-size: 16px;
@@ -34,7 +51,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: 0.3s;
 }
 
 .nav-links ul li a img {
@@ -45,19 +61,22 @@
 
 .nav-buttons {
     display: flex;
-    gap: 15px;
+    gap: 24px;
     align-items: center;;
 }
 
 .login-btn {
-   height: 60px;
-   background-color: #FFE492;
-   color: #043873;
-   border: none;
-   border-radius: 7px;
-   padding: 0 25px;
-    font-weight: 500;
-;
+  font-weight: 500;
+  font-style: medium;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -2%;
+  width: 126px;
+  height: 60px;
+  color: #043873;
+  background-color: #FFE492;
+  border: none;
+  border-radius: 8px;
 }
 
 .signup-btn {
@@ -66,7 +85,11 @@
     height: 60px;
     background: #4F9CF9;
     border: none;
-    border-radius: 7px;
+    font-style: medium;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -2%;
+    border-radius: 8px;
     color: white;
     align-items: center;
     padding: 0 15px;
@@ -86,26 +109,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    padding: 0 120px;
+    padding: 0 220px;
 }
 
 .main-text {
+  display: flex;
+  color: white;
+  flex-direction: column;
+}
+
+.main-text p {
     color: white;
     text-align: left;
-    width: 50%;
+    max-width: 656px;
+    width: 100%;
+    min-height: 60px;
+    margin-top: 24px;
+    height: auto;
+
 }
 
 .main-heading {
     font-size: 64px;
     font-weight: 700;
     line-height: 60px;
-    width: 656;
-    height: 154;
-}
-
-.main-text p {
-  margin-top: 30px;
+    width: 100%;
+    max-width: 656px;
+    height: 154px;
+    flex-wrap: wrap ;
 }
 
 .main-text button {
@@ -121,20 +152,26 @@
     justify-content: center;
     padding: 0 15px;
     font-weight: 500;
-    margin-top: 37px;
     font-style: medium;
+    margin-top: 60px;
     line-height: 23px;
     font-size: 18px;
     font-weight: 500;
 }
 
 .main-img {
-  max-width: 800px;
+    max-width: 800px;
     aspect-ratio: 551 / 367; 
     background-color: #C4DEFD;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 824;
+    height: 549;
+    angle: 0 deg;
+    opacity: 1;
+    gap: 4px;
+
 }
 
 .main-img img {
@@ -149,7 +186,7 @@
   align-items: center;
   justify-content: center;
   min-height: 760px;
-  padding: 0 40px;
+  padding: 0 220px;
   background: url("BACKGROUND.png") no-repeat left;
   flex-direction: row;
   
@@ -223,7 +260,7 @@
   align-items: center;
   justify-content: center;
   height: 760px;
-  padding: 0 60px;
+  padding: 0 220px;
 }
 
 .wt-heading {
@@ -299,7 +336,7 @@
   align-items: center;
   justify-content: center;
   height: 760px;
-  padding: 0 40px; 
+  padding: 0 220px; 
   background-color: #043873;
 }
 
@@ -372,7 +409,7 @@
   gap: 70px;
   align-items: center;
   justify-content: center;
-  padding: 70px 40px;
+  padding: 70px 220px;
 }
 
 .cst-heading {
@@ -732,7 +769,7 @@
   align-items: center;
   justify-content: center;
   height: 574px;
-  padding: 0 40px;
+  padding: 0 220px;
 }
 
 .data-heading {
@@ -824,6 +861,7 @@
   justify-content: center;
   background: #043873 url("Element.png") no-repeat center;
   height: 750px;
+  padding: 0 220px;
 }
 
 .apps-content h1 {
@@ -870,22 +908,28 @@
 
 .clients {
   width: 100%;
-  padding: 60px 0;
+  padding: 60px 220px;
   background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
 }
 
 .clients-heading {
-  text-align: center;
-  margin-bottom: 50px;
+  width: 1479px;
+  height: 84px;
 }
 
 .clients-heading h1 {
-  font-size: 40px;
+  text-align: center;
   font-weight: 700;
-  color: #1b1b1b;
-
-  background: none !important;
-  box-shadow: none !important;
+  font-style: bold;
+  font-size: 70px;
+  line-height: 84px;
+  letter-spacing: 0%;
+  text-align: center;
 }
 
 .clients-img {
@@ -951,41 +995,77 @@
     padding: 80px 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #043873;
     color:#ffffff ;
 }
 
 .cta-box {
-    border: 2px dotted rgba(255,255,255,0.3);
-    padding: 40px 50px;
     text-align: center;
-    width: 400px;
+    max-width: 608px;
+    width: 100%;
+    min-height: 533px;
 }
 
 .cta-box h1 {
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 72px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-align: center;
+
 }
 
 .subtitle {
     color: #cddbee;
     margin-bottom: 25px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -2%;
+    text-align: center;
+
 }
 
 .cta-btn {
     background: #4ca9ff;
     color: white;
     border: none;
-    padding: 12px 30px;
+    padding: 20px 40px;
     border-radius: 6px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin: 40px 0;
+    width: 218px;
+    height: 60px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -2%;
 }
 
 .contact {
     margin-top: 10px;
     margin-bottom: 20px;
     color: #cddbee;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -2%;
+    text-align: center;
+
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
 }
 
 .icons img {
@@ -1050,6 +1130,16 @@
 }
 
 @media (max-width: 1140px) {
+    .nav-links {
+      display: none;
+    }
+    .burger {
+      display: block;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      margin-left: 20px;
+    }
     .main-content {
         flex-direction: column;
         height: 1051px;
