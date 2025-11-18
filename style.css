@@ -116,11 +116,11 @@
   display: flex;
   color: white;
   flex-direction: column;
+  text-align: left;
 }
 
 .main-text p {
     color: white;
-    text-align: left;
     max-width: 656px;
     width: 100%;
     min-height: 60px;
@@ -415,7 +415,6 @@
 .cst-heading {
   max-width: 670px;
   width: 100%;
-  height: 174px;
   position: relative;
 }
 
@@ -570,7 +569,8 @@
 .sec-cards-body {
   display: flex;
   flex-direction: row;
-  width: 384px;
+  width: 100%;
+  max-width: 384px;
   gap: 15px;
   align-items: center;
 }
@@ -656,7 +656,8 @@
 .pri-cards-body {
   display: flex;
   flex-direction: row;
-  width: 384px;
+  max-width: 384px;
+  width: 100%;
   gap: 15px;
   align-items: center;
 }   
@@ -713,7 +714,6 @@
   width: 100%;
   text-align: center;
   padding: 0 30px;
-  height: 87;
   position: relative;
 }
 
@@ -787,6 +787,11 @@
   letter-spacing: -2%;
 }
 
+.data img {
+  width: 562px;
+  height: 314px;
+}
+
 .data-body img {
   position: absolute;
   z-index: -1;
@@ -856,7 +861,7 @@
 
 .apps {
   display: flex;
-  gap: 50px;
+  gap: 100px;
   align-items: center;
   justify-content: center;
   background: #043873 url("Element.png") no-repeat center;
@@ -864,8 +869,16 @@
   padding: 0 220px;
 }
 
+.apps-content {
+  display: flex;
+  gap: 24px;
+  align-items: left;
+  flex-direction: column;
+}
+
 .apps-content h1 {
-  width: 798px;
+  max-width: 798px;
+  width: 100%;
   font-weight: 700;
   font-size: 72px;
   line-height: 100%;
@@ -882,7 +895,8 @@
   line-height: 30px;
   letter-spacing: -2%;
   color: white;
-  width: 798px;
+  max-width: 798px;
+  width: 100%;
   height: 60px;
 }
 
@@ -906,6 +920,14 @@
     font-weight: 500;
 }
 
+.apps-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 528px;
+  height: 427px;
+}
+
 .clients {
   width: 100%;
   padding: 60px 220px;
@@ -918,6 +940,9 @@
 }
 
 .clients-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1479px;
   height: 84px;
 }
@@ -1082,8 +1107,8 @@
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-direction: row;
     gap: 40px;
 }
 
@@ -1101,27 +1126,38 @@
 .footer-btn {
     background: #4ca9ff;
     border: none;
-    padding: 10px 25px;
+    padding: 20px 40px;
     color: white;
     border-radius: 6px;
     cursor: pointer;
     margin-top: 20px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -2%;
 }
-
 
 .footer-bottom {
     margin-top: 60px;
     border-top: 1px solid #1559a8;
     padding-top: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     color: #cddbee;
     font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-bottom span {
-    padding-left: 20px;
+    padding-right: 60px;
+}
+
+.social img {
+  width: 4px;
+  height: 10px;
 }
 
 .social img {
@@ -1129,16 +1165,46 @@
     margin-left: 10px;
 }
 
-@media (max-width: 1140px) {
-    .nav-links {
+
+
+@media (max-width: 1440px){
+  .navbar{
+    padding: 0 32px;
+  }
+  .main-content, .project-management, .work, .extension, .customise, .data, .work-together, .apps
+  {
+    padding: 0 32px;
+  }
+  .customise {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 1152px) {
+  .nav-links ul{
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .pri-cards{
+    width: 341px;
+    min-height: 853px;
+    height: auto  ;
+  }
+  .sec-cards{
+    min-height: 700px;
+    height: auto;
+    width: 340px;
+  }
+  .sec-cards-body {
+
+  }
+}
+
+@media (max-width: 768px) {
+    .nav-buttons button {
       display: none;
-    }
-    .burger {
-      display: block;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-      margin-left: 20px;
     }
     .main-content {
         flex-direction: column;
@@ -1153,11 +1219,12 @@
         text-align: center;
     }
     .main-text {
-        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        text-align: center;
+        margin-top: 0px;
     }
     .main-text button {
         margin: 0 auto;
@@ -1199,7 +1266,7 @@
       flex-direction: column;
       min-height: 1000px;
       padding: 40px 0;
-      gap: 30px;
+      gap: 7  0px;
     }
     .wt-heading img {
       position: absolute;
@@ -1217,6 +1284,7 @@
     }
     .wt-button button {
       margin: 0 auto;
+      margin-top: 20px;
     }
     .extension {
       flex-direction: column;
@@ -1235,9 +1303,20 @@
     }
     .ext-button button {
       margin: 0 auto;
+      margin-top: 20px;
     }
     .ext-heading img {
       left: 10px;
+    }
+    .plan {
+      gap: 200px;
+    }
+    .pri-cards {
+      max-width: 472px;
+      width: 100%;
+    }
+    .sec-cards {
+      width: 472px;
     }
     .customise {
       flex-direction: column;
@@ -1316,6 +1395,185 @@
       margin: 0 auto;
     }
 
+    .footer-grid {
+      grid-template-columns: 200px 200px 200px;
+    }
+    .clients-heading {
+      max-width: 728px;
+      height: 130px;
+    }
+    .cta-section {
+      justify-content: left;
+    }
+    .cta-box {
+      text-align: left;
+      padding: 0 20px;
+    }
+    .cta-box h1 {
+      text-align: left;
+    }
+    .cta-box p{
+      text-align: left;
+    }
+    .icons {
+      justify-content: left;
+    }
+    .footer {
+      padding: 60px 32px;
+    }
+    .footer-grid {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 100px;
+        padding: 0px;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: left;
+    }
+
+    .main-heading, .pm-heading h1, .wt-heading h1, .ext-heading h1, .customise h1, .plan-heading h1, .work-heading h1, .data-heading h1, .apps-content h1 {
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 54px;
+      line-height: 100%;
+      letter-spacing: -2%;
+      text-align: center;
+    }
+
+
+}
+
+@media (max-width: 320px) {
+  .main-heading, .pm-heading h1, .wt-heading h1, .ext-heading h1, .customise h1, .plan-heading h1, .work-heading h1, .data-heading h1, .apps-content h1, .clients-heading h1, .cta-box h1 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+
+  .cta-box {
+    text-align: center;
+  }
+
+  .footer-grid {
+    text-align: center; 
+    align-items: center;
+  }
+
+  .footer-col {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .footer-bottom-span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .footer-bottom-span span {
+    padding: 0;
+  }
+
+  .social {
+    margin-top: 20px;
+  }
+
+  .cta-box p{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+
+  .main-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-img, .pm-img, .wt-img {
+    width: 286px;
+    height: 191px;
+  }
+
+  .main-text p {
+    margin: 0px;
+  }
+
+  .ext-button {
+    margin-top: 40px;
+  }
+
+  .pri-cards {
+    width: 298px;
+    height: 642px;
+  }
+
+  .work {
+    height: 800px;
+    gap: 10px;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+  }
+
+  .work button {
+    margin-top: 290px;
+  }
+
+  .data img {
+    width: 290px;
+    height: 162px;
+  }
+
+  .apps-img img {
+    width: 286px;
+    height: 231px;
+  }
+
+  .clients-heading {
+    width: 288px;
+    height: 104px;
+    text-align: center;
+  }
+
+  .apps-content button {
+    margin-top: 60px;
+  }
+
+  .cst-heading h1 {
+    max-width: 288px;
+    width: 100%;
+    height: 104px;
+  }
+  .cst-text {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: center;
+    max-width: 288px;
+    width: 100%;
+    height: 138px;
+  }
+  .cst-button {
+    margin-top: 20px;
+  }
 }
 
 
